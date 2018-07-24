@@ -5,9 +5,13 @@ class WeatherList extends Component {
 
     renderWeather(cityData) {
         const name = cityData.city.name;
+        const temps = cityData.list.map(weather => weather.main.temp);
         return (
             <tr key={name}>
                 <td>{name}</td>
+                <td>
+                    A Chart here
+                </td>
             </tr>
         )
     }
@@ -15,7 +19,7 @@ class WeatherList extends Component {
     render() {
         return (
             <table className="table table-hover">
-                <thead>
+                <thead className="test">
                     <tr>
                         <th>City</th>
                         <th>Temperature</th>
